@@ -1,0 +1,168 @@
+<html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulario de Registro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .btn {
+      background: #333;
+      color: #fff;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      padding: 60px 20px;
+    }
+
+    .formulario {
+      background: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .formulario h2 {
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .formulario input {
+      width: 100%;
+      padding: 12px;
+      margin: 12px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .formulario .password-container {
+      position: relative;
+    }
+
+    .formulario .toggle-password {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .formulario .imagen {
+      width: 22px;
+      height: 22px;
+      opacity: 0.6;
+    }
+
+    .formulario button[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background: #333;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .formulario .texto {
+      font-size: 12px;
+      color: #888;
+      margin-top: 20px;
+    }
+
+    .social-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .social-buttons button {
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .google {
+      background: #db4437;
+    }
+
+    .facebook {
+      background: #3b5998;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">🌐</div>
+    <div class="logo">ComuniEventos</div>
+    <a href="prueba1.html" class="btn">Volver al inicio</a>
+  </header>
+
+  <main>
+    <form class="formulario" action="login.php" method="POST">
+
+      <h2>Registro</h2>
+  <form action="login.php" method="POST">
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="email" name="correo" placeholder="Correo electrónico" required>
+
+    <div class="password-container">
+      <input type="password" name="contraseña" id="password" placeholder="Contraseña" required>
+      <button type="button" class="toggle-password" onclick="togglePassword()">
+      </button>
+    </div>
+      <button type="submit">Inscribirse</button>
+
+      <p class="texto">
+        Al registrarse, acepta nuestros <a href="#">Términos de servicio</a> y 
+        <a href="#">Política de privacidad</a>.
+      </p>
+    </form>
+  </main>
+
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById("password");
+      passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+    }
+  </script>
+
+</body>
+</html>
